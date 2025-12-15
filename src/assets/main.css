@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --color-primary: #A50000;
+  --color-primary-content: #ffffff;
+
+  --color-secondary: #0E966C;
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #E6A300;
+  --color-accent-content: #000000;
+
+  --color-neutral: #1f2937;
+  --color-base-100: #ffffff;
+
+  /* Custom names */
+  --color-smc-red: #A50000;
+  --color-smc-maroon: #6E0000;
+  --color-smc-gold: #E6A300;
+  --color-smc-ochre: #C89305;
+  --color-smc-teal: #0E966C;
+  --color-smc-forest: #07593D;
+
+  /* Semantic Overrides for strict branding */
+  --color-success: #0E966C;
+  /* Brand Teal */
+  --color-success-content: #ffffff;
+
+  --color-warning: #E6A300;
+  /* Brand Gold */
+  --color-warning-content: #000000;
+
+  --color-error: #A50000;
+  /* Brand Red */
+  --color-error-content: #ffffff;
+
+  --color-info: #07593D;
+  /* Brand Forest Green (using for 'Good' or Info to stay in palette) */
+  --color-info-content: #ffffff;
+}
+
+/* Scoped Preflight / Base Reset */
+#smc-plugin {
+  /* Basic reset for the plugin container to behave predictably */
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+
+  /* Apply theme colors to css variables if DaisyUI needs them */
+  --p: 22 100% 100% 17%;
+  /* Fail fallback */
+
+  /* Actually with @theme above, 'bg-primary' should work. */
+}

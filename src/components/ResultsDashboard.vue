@@ -2,6 +2,7 @@
 import { useAssessmentStore } from '../stores/assessment'
 import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
+import logo from '../assets/logo.jpg'
 
 import jsPDF from 'jspdf'
 import html2canvas from 'html2canvas'
@@ -151,7 +152,7 @@ const gaugeColor = computed(() => {
         
         <!-- Header -->
         <div class="flex justify-between items-start pb-4 mb-8" style="border-bottom: 2px solid #A50000;">
-            <img src="/logo.jpg" alt="SMC" class="h-20 w-auto object-contain" />
+            <img :src="logo" alt="SMC" class="h-20 w-auto object-contain" />
             <div class="text-right">
                 <h1 class="text-3xl font-bold" style="color: #0E966C;">Readiness Report</h1>
                 <p style="color: #6b7280;">{{ new Date().toLocaleDateString() }}</p>

@@ -1,5 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue'
+import logo from './assets/logo.jpg'
 import PasswordProtection from './components/PasswordProtection.vue'
 import { useAssessmentStore } from './stores/assessment'
 import { storeToRefs } from 'pinia'
@@ -35,7 +36,7 @@ function onAssessmentComplete() {
         <!-- Header -->
         <header class="bg-base-100 border-b border-base-200 p-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <div class="flex items-center gap-4">
-              <img src="logo.jpg" alt="SMC Logo" class="h-16 w-auto object-contain" />
+              <img :src="logo" alt="SMC Logo" class="h-16 w-auto object-contain" />
               <div>
                   <h1 class="text-2xl font-bold text-secondary">Business Assessment</h1>
                   <p class="text-sm text-base-content/70">Evaluate your business readiness</p>
